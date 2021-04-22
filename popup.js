@@ -17,7 +17,7 @@ thisForm.addEventListener("submit", async function (e) {
   }
   var length = formData.get("length");
   const response = await fetch(
-    "https://photocryptapi.herokuapp.com/?url=" +
+    "https://yv7al4ttub.execute-api.us-east-1.amazonaws.com/Alpha/?url=" +
       url +
       "&caps=" +
       caps +
@@ -36,7 +36,7 @@ thisForm.addEventListener("submit", async function (e) {
   document.getElementById("demo").style.display = "block";
   try {
     const result = await response.json();
-    document.getElementById("demo").innerHTML = "Code: " + result.code;
+    document.getElementById("demo").innerHTML = "Code: " + result;
     document.getElementById("demo").style.color = "#313131";
   } catch (err) {
     document.getElementById("demo").innerHTML = "Invalid URL";
